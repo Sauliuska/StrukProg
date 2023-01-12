@@ -14,7 +14,6 @@ int main()
         {
             if(prices[j]-prices[i] > max_profit)
             {
-                cout << "[j] = " << prices[j] << " - " << "  [i] = " << prices[i] << endl;
                 max_profit = prices[j] - prices[i];
             }
         }
