@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int e_k = 6; // Elementu skaicius masyve
+    int prices[e_k] = {7, 1, 5, 3, 6, 4};
+    // int prices[e_k] = {7, 6, 4, 3, 1};
+    int max_profit = 0;
+    for(int i = 0; i < e_k-1; i++)
+    {
+        for(int j = i+1; j < e_k; j++)
+        {
+            if(prices[j]-prices[i] > max_profit)
+            {
+                cout << "[j] = " << prices[j] << " - " << "  [i] = " << prices[i] << endl;
+                max_profit = prices[j] - prices[i];
+            }
+        }
+    }
+    cout << "Max profit = " << max_profit << endl;
+    return 0;
+}
